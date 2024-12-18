@@ -22,7 +22,7 @@ docker-compose up -d
 
 Stopping docker-compose
 ````shell
-docker-compose down
+docker-compose stop
 ````
  
 ## Validations

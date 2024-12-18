@@ -14,6 +14,6 @@ public class JsonPlaceHolderConsumer {
     @KafkaListener(topics = TopicEnum.TopicNames.JSON_PLACE_HOLDER_POSTS_TOPIC)
     public void consume(String message) throws InterruptedException {
         log.info("status=success, message={}", message);
-//        Thread.sleep(Duration.ofSeconds(1).toMillis()); //Simular consumidor lento
+        Thread.sleep(Duration.ofSeconds(1).toMillis()); //Simular consumidor lento
     }
 }
