@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/stack-cases.iml" filepath="$PROJECT_DIR$/.idea/stack-cases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kafka-lag-monitoring.iml" filepath="$PROJECT_DIR$/.idea/kafka-lag-monitoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-boot-kafka-example.main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-boot-kafka-example.main.iml" />
     </modules>
   </component>
 </project>
