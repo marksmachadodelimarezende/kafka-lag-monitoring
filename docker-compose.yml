@@ -41,6 +41,35 @@ services:
     environment:
       KAFKA_BROKERCONNECT: "kafka:19092"
 
+  burrow:
+    build:
+      context: .
+      dockerfile: ./burrow-config/Dockerfile
+    container_name: burrow
+    hostname: burrow
+    networks:
+      - observability-network
+    volumes:
+      - ./burrow-config/burrow.toml:/etc/burrow/burrow.toml
+    ports:
+      - 8000:8000
+    depends_on:
+      - zookeeper
+      - kafka
+    restart: always
+
+  burrow-exporter:
+    image: simenduev/burrow-exporter
+    container_name: burrow-exporter
+    hostname: burrow-exporter
+    networks:
+      - observability-network
+    ports:
+      - 8237:8237
+    depends_on:
+      - burrow
+    command: ["--burrow.address", "http://burrow:8000"]
+
 networks:
   observability-network:
     driver: bridge
