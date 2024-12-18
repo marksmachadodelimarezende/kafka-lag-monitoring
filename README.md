@@ -6,7 +6,7 @@ Repository with docker compose stack cases
 * **kafka**: wurstmeister/kafka
 * **kafdrop**: obsidiandynamics/kafdrop
 
-### Running
+## Running
 Create docker network if necessary before execute docker-compose up.
 ```shell
 docker network create "observability-network"
@@ -22,4 +22,6 @@ Stopping docker-compose
 docker-compose down
 ````
  
-
+## Validations
+After docker-compose up services:
+* Check Kafdrop service: [locahost:9000](http://localhost:9000/)
