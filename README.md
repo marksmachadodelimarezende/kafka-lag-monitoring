@@ -5,6 +5,8 @@ Repository with docker compose stack cases
 * **zookeeper**: wurstmeister/zookeeper
 * **kafka**: wurstmeister/kafka
 * **kafdrop**: obsidiandynamics/kafdrop
+* **burrow**: golang:1.22.3-alpine build
+* **burrow-exporter**: simenduev/burrow-exporter
 
 ## Running
 Create docker network if necessary before execute docker-compose up.
