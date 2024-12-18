@@ -143,7 +143,8 @@
           },
           "disableTextWrap": false,
           "editorMode": "builder",
-          "expr": "sum by(topic, partition) (increase(kafka_burrow_topic_partition_offset{topic=~\"$topic\"}[$__rate_interval]))",
+          "exemplar": true,
+          "expr": "sum by(topic, partition) (kafka_burrow_topic_partition_offset{topic=~\"$topic\"})",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
@@ -224,7 +225,7 @@
         "y": 8
       },
       "id": 152,
-      "interval": "3m",
+      "interval": "1m",
       "options": {
         "legend": {
           "calcs": [
@@ -536,7 +537,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "burrow",
           "value": "burrow"
         },
@@ -686,6 +687,6 @@
   "timezone": "",
   "title": "Kafka Lag",
   "uid": "5nhADrDWR",
-  "version": 12,
+  "version": 4,
   "weekStart": ""
 }
